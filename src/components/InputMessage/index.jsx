@@ -25,7 +25,7 @@ export default function InputMessage() {
 
     const [input, setInput] = useState('');
 
-    function exibe(message){
+    function mandaInput (message){
         client.publish(topic,message);
     }
 
@@ -35,10 +35,9 @@ export default function InputMessage() {
             <InputMQTT 
             type="text" 
             placeholder="Digite sua mensagem" 
-            value={input}
-            onChange={(e)=> setInput(console.log(e.target.value))}
+            onChange={(evento)=> setInput(evento.target.value)}
             />
-            <ButtonInput>Enviar</ButtonInput>
+            <ButtonInput onClick={()=> mandaInput(input)}>Enviar</ButtonInput>
         </ContainerInput>
     )
 }

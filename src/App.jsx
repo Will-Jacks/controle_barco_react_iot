@@ -13,7 +13,7 @@ function App() {
     <Connection/>
     <ExibeMsg/>
     <SendMQTT/>
-   {/*  <InputMessage/> */}
+    <InputMessage/>
     </div>
   )
 }
