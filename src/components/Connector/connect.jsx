@@ -13,6 +13,7 @@ export default function Connection() {
     client.on('connect', () => {
         setConnectionStatus(true);
         client.subscribe(topic);
-    });
+        client.publish(topic, 'Conectado com sucesso!');
+      });
   }, []);
 }

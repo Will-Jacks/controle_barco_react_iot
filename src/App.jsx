@@ -1,7 +1,7 @@
 import './App.css';
 import Connection from './components/Connector/connect';
 import ImagemHeader from './components/ImgHeader';
-import InputMessage from './components/InputMessage';
+import InputMessage from './components/InputMessage/Input';
 import ExibeMsg from './components/Message/message';
 import { SendMQTT } from './components/Send/send';
 

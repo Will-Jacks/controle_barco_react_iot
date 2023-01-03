@@ -23,10 +23,14 @@ const ButtonInput = styled(ButtonsMQTT)`
 
 export default function InputMessage() {
 
-    const [input, setInput] = useState('');
+    const [input, setInput] = useState({
+        message: ''
+    });
+
 
     function mandaInput (message){
         client.publish(topic,message);
+        console.log(valueInput)
     }
 
     return (
@@ -35,7 +39,7 @@ export default function InputMessage() {
             <InputMQTT 
             type="text" 
             placeholder="Digite sua mensagem" 
-            onChange={(evento)=> setInput(evento.target.value)}
+            onChange={evento => setInput(evento.target.value)}
             />
             <ButtonInput onClick={()=> mandaInput(input)}>Enviar</ButtonInput>
         </ContainerInput>

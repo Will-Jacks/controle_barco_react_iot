@@ -13,12 +13,16 @@ export function SendMQTT() {
     }
     return(
         <ButtonsContainer>
-            <ButtonsMQTT onClick={()=> enviar('Cima')}>Cima</ButtonsMQTT>
+            <ButtonsMQTT onClick={()=> enviar('Cima')}>Frente</ButtonsMQTT>
             <div>
                 <ButtonsMQTT onClick={()=> enviar('Esquerda')}>Esquerda</ButtonsMQTT>
                 <ButtonsMQTT onClick={()=> enviar('Direita')}>Direita</ButtonsMQTT>
             </div>
             <ButtonsMQTT onClick={()=> enviar('Tras')}>Tras</ButtonsMQTT>
+            <div>
+            <ButtonsMQTT onClick={()=> enviar('Parar')}>Parar</ButtonsMQTT>
+            <ButtonsMQTT onClick={()=> enviar('Liga led')}>Led</ButtonsMQTT>
+            </div>
         </ButtonsContainer>
     )
 }
