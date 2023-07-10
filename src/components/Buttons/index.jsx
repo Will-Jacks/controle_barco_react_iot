@@ -13,4 +13,5 @@ export const ButtonsMQTT = styled.button`
     width:150px;
     height:100px;
     margin:10px;
+    {userSelect: 'none'};
 `
